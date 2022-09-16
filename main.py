@@ -49,7 +49,7 @@ class User(UserMixin, db.Model):
     comments = relationship("Comment", back_populates="comment_author")
 
 
-db.create_all()
+
 
 
 class BlogPost(db.Model, UserMixin):
@@ -65,7 +65,7 @@ class BlogPost(db.Model, UserMixin):
     comments = relationship("Comment", back_populates="parent_post")
 
 
-db.create_all()
+
 
 
 class Comment(UserMixin, db.Model):
